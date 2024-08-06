@@ -32,7 +32,7 @@ export default function Home() {
           </BlurFade>
           <BlurFade delay={0.25 * 2} inView>
             <p className="text-gray-400 mb-8 max-w-2xl text-center">
-              A platforms for cohort members to share there projects and review each other's projects.
+              A platforms for cohort members to share there projects and review each other&apos;s projects.
             </p>
           </BlurFade>
           <Button className="px-6 py-3 text-lg bg-red-500 hover:bg-red-800">Get Started →</Button>
