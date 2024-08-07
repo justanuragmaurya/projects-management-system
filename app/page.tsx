@@ -6,7 +6,6 @@ import { ChevronRight } from "lucide-react";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import BlurFade from "@/components/magicui/blur-fade";
 
-
 export default function Home() {
   return (
     <>
@@ -27,11 +26,11 @@ export default function Home() {
             </AnimatedGradientText>
           </div>
           <BlurFade delay={0.25} inView>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 max-w-3xl text-center leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 max-w-4xl text-center leading-tight">
               Hey , welcome to<span className="text-red-500"> 100xDevs </span>Projects , hope you have a great time. </h2>
           </BlurFade>
           <BlurFade delay={0.25 * 2} inView>
-            <p className="text-gray-400 mb-8 max-w-2xl text-center">
+            <p className="text-gray-400 mb-8 max-w-3xl text-center">
               A platforms for cohort members to share there projects and review each other&apos;s projects.
             </p>
           </BlurFade>
@@ -56,7 +55,6 @@ export default function Home() {
           />
         </main>
       </div>
-
       <div className="flex flex-col gap-5 mt-8 items-center text-center justify-center">
         <h2 className="text-white mt-56">‎</h2>
       </div>
