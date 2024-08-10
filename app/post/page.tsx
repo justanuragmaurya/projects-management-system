@@ -38,7 +38,7 @@ export default function ProjectForm() {
         console.log(respone.data)
         respone.data.message == "success" ? successToast() : console.log("")
         setLoading(false)
-        router.push("/")
+        router.push("/view")
     };
 
     let url = ""
