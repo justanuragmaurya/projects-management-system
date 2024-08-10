@@ -5,9 +5,10 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/components/ui/use-toast';
 import { waveform } from 'ldrs'
-waveform.register()
+
 
 export default function ProjectForm() {
+    waveform.register()
     const router = useRouter()
     const { toast } = useToast()
     const [loading, setLoading] = useState(false);
