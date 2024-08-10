@@ -70,7 +70,7 @@ export default function ProjectForm() {
                         name="description"
                         value={formData.description}
                         onChange={handleChange}
-                        maxLength={100}
+                        maxLength={200}
                         className="w-full bg-[#1a1a1a] border-gray-800 text-white rounded-md p-2"
                         required
                     />
