@@ -34,16 +34,19 @@ function GetProjects() {
                     <div className="text-sm text-muted-foreground">@yourgithub</div>
                   </div>
                 </div>
+                <div className="bg-gray-400 h-[250px] w-[360px]">
+                    Thumbnail
+                </div>
                 <div className="grid gap-4">
                   <div className="flex items-center gap-2 text-sm">
                     <GithubIcon className="w-4 h-4" />
-                    <Link href={`${project.githubLink}`} className="underline underline-offset-2" prefetch={false}>
+                    <Link href={`${project.githubLink}`}  target="_blank" className="underline underline-offset-2" prefetch={false}>
                       Github
                     </Link>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <GlobeIcon className="w-4 h-4" />
-                    <Link href={`${project.liveDemo}`} className="underline underline-offset-2" prefetch={false}>
+                    <Link href={`${project.liveDemo}`} target="_blank" className="underline underline-offset-2" prefetch={false}>
                       Live Link
                     </Link>
                   </div>
@@ -62,6 +65,7 @@ function GetProjects() {
                     <span>Took {project.timeTaken} hours to build this</span>
                   </div>
                 </div>
+                <button className=" border-[#2a2a2a] border rounded-md px-5 py-2 text-[#9d9d9d]"> View More ...  </button>
               </Card>
             ))}
         </div>
