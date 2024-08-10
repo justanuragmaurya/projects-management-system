@@ -17,13 +17,13 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
-import { Card } from "@/components/ui/card"
+import { UICard } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import Link from "next/link"
 
 export function Card() {
   return (
-    <Card className="w-full max-w-md p-6 grid gap-6">
+    <UICard className="w-full max-w-md p-6 grid gap-6">
       <div className="flex items-center gap-4">
         <Avatar className="border w-11 h-11">
           <AvatarImage src="/placeholder-user.jpg" alt="@username" />
@@ -60,11 +60,11 @@ export function Card() {
           <span>3 months</span>
         </div>
       </div>
-    </Card>
+    </UICard>
   )
 }
 
-function ClockIcon(props) {
+function ClockIcon(props:any) {
   return (
     <svg
       {...props}
@@ -85,7 +85,7 @@ function ClockIcon(props) {
 }
 
 
-function GithubIcon(props) {
+function GithubIcon(props:any) {
   return (
     <svg
       {...props}
@@ -106,7 +106,7 @@ function GithubIcon(props) {
 }
 
 
-function GlobeIcon(props) {
+function GlobeIcon(props:any) {
   return (
     <svg
       {...props}
@@ -128,7 +128,7 @@ function GlobeIcon(props) {
 }
 
 
-function PinIcon(props) {
+function PinIcon(props:any) {
   return (
     <svg
       {...props}
