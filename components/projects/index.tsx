@@ -20,11 +20,10 @@ function GetProjects() {
     }, []);
     return (
         <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-8 pt-32 justify-around px-10 w-full justify-evenly">
-            {projects.map((project:Project, index) => (
-                
-                <div className="flex flex-col bg-[#0a0a0a] py-5 px-5 border-[#2a2a2a] border-[0.5px] rounded-md h-[500px] overflow-auto ">
+            {projects.map((project:Project, index) => ( 
+                <div key={index} className="flex flex-col bg-[#0a0a0a] py-5 px-5 border-[#2a2a2a] border-[0.5px] rounded-md h-[500px] overflow-auto ">
                     <h2 className="text-red-500 text-3xl font-bold">{project.name}</h2>
-                    <div className="flex gap-5 text-[#b0b0b0] ">
+                    <div className="flex gap-5 text-[#1a1a1a] ">
                         <a href={`${project.githubLink}`}>Github</a>
                         <a href={`${project.liveDemo}`}>Live Link</a>
                     </div>
