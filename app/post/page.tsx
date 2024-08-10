@@ -1,9 +1,15 @@
 "use client"
 import { useState } from 'react';
 import { Input } from "@/components/ui/input";
-import mongoose from "mongoose"
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
+import { useToast } from '@/components/ui/use-toast';
+
 
 export default function ProjectForm() {
+    const router = useRouter()
+    const { toast } = useToast()
+
     const [formData, setFormData] = useState({
         name: '',
         githubLink: '',
@@ -17,11 +23,22 @@ export default function ProjectForm() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const successToast =() => {
+        toast({
+            title: "Success",
+            description: "Project posted successfully , you we will be redirected shortly",
+        })
+    }
+
     const handleSubmit = async(e:any) => {
         e.preventDefault();
-        console.log(formData);
-        await mongoose.connect(`${url}/secretsDB`);
-
+        // console.log(formData);
+        const respone = await axios.post("/api/postProject",formData)
+        console.log(respone.data)
+        respone.data.message == "success"? successToast(): console.log("")
+        setTimeout(() => {
+            router.push("/")
+        }, 4000);
     };
 
     let url =""
@@ -73,15 +90,4 @@ export default function ProjectForm() {
             </form>
         </div>
     );
-}
-
-
-
-interface projectData{
-    name: String,
-    githubLink: String,
-    liveDemo: String,
-    description: String,
-    techStack: String,
-    timeTaken: Number
 }
