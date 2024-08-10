@@ -21,9 +21,9 @@ function GetProjects() {
         fetchData();
     }, []);
     return (
-        <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-8 pt-32 justify-around my-5 px-10 w-full justify-evenly">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-8 pt-32 my-5 px-10 w-full">
             {projects.map((project:Project, index) => ( 
-                <UICard key={index} className="w-full max-w-md p-6 grid gap-6 bg-[#0a0a0a] text-[#dedede] border-[#1a1a1a]">
+                <UICard key={index} className="w-full max-w-md p-6 grid gap-6 bg-[#0a0a0a] shadow-lg hover:scale-105 transition-all hover:shadow-gray-900 drop-shadow-sm text-[#dedede] border-[#1a1a1a]">
                 <div className="flex items-center gap-4">
                   <Avatar className="border w-11 h-11">
                     <AvatarImage src="placeholder-user" alt="@username" />
@@ -34,8 +34,8 @@ function GetProjects() {
                     <div className="text-sm text-muted-foreground">@yourgithub</div>
                   </div>
                 </div>
-                <div className="bg-gray-400 h-[250px] w-[360px]">
-                    Thumbnail
+                <div className="bg-gray-400 h-[250px] p-5 flex items-center justify-center">
+                    Thumbnail will appear here
                 </div>
                 <div className="grid gap-4">
                   <div className="flex items-center gap-2 text-sm">
