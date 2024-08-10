@@ -1,14 +1,12 @@
 "use client"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Input } from "@/components/ui/input";
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/components/ui/use-toast';
-import { waveform } from 'ldrs'
-
 
 export default function ProjectForm() {
-    waveform.register()
+    
     const router = useRouter()
     const { toast } = useToast()
     const [loading, setLoading] = useState(false);
@@ -88,7 +86,7 @@ export default function ProjectForm() {
                     <Input type="number" id="timeTaken" name="timeTaken" value={formData.timeTaken} onChange={handleChange} className="bg-[#1a1a1a] border-gray-800 text-white" required />
                 </div>
 
-                {loading ? <div className='flex items-center justify-center'> <l-waveform size="40" stroke="5" speed="0.8" color="gray"></l-waveform></div>: 
+                {loading ? <div className='flex items-center justify-center text-pretty'>Loading...</div>: 
                 <button type="submit" className="w-full bg-red-500 hover:bg-red-700 text-white p-2 rounded-md">Post Project</button>}
             </form>
         </div>
