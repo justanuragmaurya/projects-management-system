@@ -2,7 +2,7 @@
 
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Card } from "@/components/ui/card"
+import { Card as UICard } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import Link from "next/link"
 
@@ -23,7 +23,7 @@ function GetProjects() {
     return (
         <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-8 pt-32 justify-around my-5 px-10 w-full justify-evenly">
             {projects.map((project:Project, index) => ( 
-                <Card key={index} className="w-full max-w-md p-6 grid gap-6 bg-[#0a0a0a] text-[#dedede] border-[#1a1a1a]">
+                <UICard key={index} className="w-full max-w-md p-6 grid gap-6 bg-[#0a0a0a] text-[#dedede] border-[#1a1a1a]">
                 <div className="flex items-center gap-4">
                   <Avatar className="border w-11 h-11">
                     <AvatarImage src="placeholder-user" alt="@username" />
@@ -66,7 +66,7 @@ function GetProjects() {
                   </div>
                 </div>
                 <button className=" border-[#2a2a2a] border rounded-md px-5 py-2 text-[#9d9d9d]"> View More ...  </button>
-              </Card>
+              </UICard>
             ))}
         </div>
     )
