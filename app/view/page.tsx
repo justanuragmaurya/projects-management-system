@@ -1,6 +1,9 @@
 import GetProjects from "@/components/projects"
 import { cn } from "@/lib/utils"
 import DotPattern from "@/components/magicui/dot-pattern"
+
+export const dynamic = 'force-dynamic';
+
 function page() {
   return (
     <div className="flex text-white">
